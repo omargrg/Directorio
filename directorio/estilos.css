@@ -1,0 +1,327 @@
+body{
+    background-color: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+/***** HEADER *****/
+.header{
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(46, 110, 139);
+    align-items: center;
+    padding: 15px 0px 15px 0px;
+    
+}
+
+.header button{
+    padding: 10px;
+    border: solid 1px white;
+    background-color: rgb(46, 110, 139);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.header button:hover{
+    background-color: rgb(29, 68, 87);
+}
+
+
+.header h1{
+    color: white;
+    margin-left: 55px;
+}
+
+/*****TERMINA HEADER *****/
+
+/* -*-*-*-*-*-*-*-*-*- */
+
+/*****BOTONERA Y BUSQUEDAS *****/
+
+.botonera{
+    width: 100%;
+    min-width: 400px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.botonera > button{
+    width:30px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px rgb(46, 110, 139);
+    color: rgb(46, 110, 139);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    padding: 0px
+}
+
+.botonera >button:hover{
+    color: white;
+    background-color: rgb(46, 110, 139);
+}
+
+.busquedas{
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.busquedas .campo{
+    font-size: 18px;
+    border: solid 1px rgb(250, 116, 54);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.busquedas .boton{
+    background-color: transparent;
+    font-size: 24px;
+    color: rgb(250, 116, 54);
+    border: none;
+    cursor: pointer;
+}
+
+/***** TERMINA BOTONERA Y BUSQUEDAS *****/
+
+/* LISTA DE RESULTADADOS Y TARJETON */
+
+.listaResultados{
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.listaResultados .contenedor{
+    width: 400px;
+    text-align: center;
+    display: block;
+}
+
+.listaResultados .contenedor ul{
+    margin-left: 0px;
+    text-align: left;
+}
+
+.listaResultados .contenedor ul li.oscuro{
+    width: 300px;
+    height: 20px;
+    background-color: #dadada;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.listaResultados .contenedor ul li.claro{
+    width: 300px;
+    height: 20px;
+    background-color: #f3f3f3;
+    margin-top: 5px;
+    padding: 5px;
+
+}
+
+.listaResultados .contenedorRegistro{
+    width:45%;
+    min-width: 400px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/*inicia tarjetón */
+.listaResultados .contenedorRegistro .registro{
+    width: 80%;
+    /*height: 300px;*/
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 10% 60% 30%; 
+    padding: 20px;
+}
+
+.listaResultados .contenedorRegistro .registro > div.cerrar{
+    grid-column-end: span 3;
+    text-align: right; 
+}
+
+.listaResultados .contenedorRegistro .registro > div.cerrar button.botonCerrar{
+    border: none;
+    background-color: transparent;
+    font-size:24px;
+    color: rgb(46, 110, 139);
+    margin-top: -10px;
+}
+
+.listaResultados .contenedorRegistro .registro > div.titulo{
+    grid-column-end: span 3;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(46, 110, 139);
+    margin-bottom: 20px;
+}
+
+.listaResultados .contenedorRegistro .registro > div.iconos{
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 2px;
+    margin-right: 2px;
+    padding: 7px;
+    text-align: center;
+    color: rgb(46, 110, 139);
+    
+}
+
+.listaResultados .contenedorRegistro .registro > div.datos{
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 2px;
+    margin-right: 2px;
+    padding: 7px;
+}
+
+.listaResultados .contenedorRegistro .registro > div.foto{
+    grid-row-end: span 4;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    padding-top: 25px;
+}
+
+.listaResultados .contenedorRegistro button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size:36px;
+    color: #aaaaaa;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.fotoRegistro{
+    width:60%;
+}
+
+/* *-*-*-*-*-*-*-*-*-*-* */
+
+/*****  VENTANA MODAL  ******/
+.modal {
+    display: none;
+  }
+  
+.modal-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.modal-container {
+    min-width: 400px;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    background-color: #fff;
+    border-radius: 10px;
+  }
+.ocultar{
+    grid-column-end: span 2;
+    text-align: right;
+  }
+
+.ocultarFormulario{
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: rgb(46, 110, 139);
+    margin-top: -10px;
+}
+.titulo{
+    grid-column: 1/3;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(46, 110, 139);
+}
+.icono{
+    grid-row-end: span 1;
+    margin: auto;
+    text-align: center;
+    color: rgb(46, 110, 139);
+}
+.campo{
+    margin: 0px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+}
+.celda{
+    width: 95%;
+    border:none;
+    border-bottom: 1px solid rgb(250, 116, 54);
+}
+
+.celdacomentarios{
+    width: 95%;
+    border-bottom: 1px solid rgb(250, 116, 54);
+    font-size: 16px;
+    color:  rgb(150, 150, 150);   
+}
+
+::-webkit-input-placeholder {font-size: 16px;
+    color:  rgb(150, 150, 150);} 
+ 
+:-moz-placeholder { /* Firefox 18- */ font-size: 16px;
+    color:  rgb(150, 150, 150);} 
+ 
+::-moz-placeholder { /* Firefox 19+ */ font-size: 16px;
+    color:  rgb(150, 150, 150); } 
+ 
+:-ms-input-placeholder { font-size: 16px;
+    color:  rgb(150, 150, 150); }
+
+.ingresarFormulario{
+    display: block;
+    grid-column: 2/3;
+    text-align: center;
+    width: 20%;
+    height: 140%;
+    color: rgb(250, 116, 54);
+    background-color: transparent;
+    border: 2px solid rgb(250, 116, 54);
+    border-radius: 3px;
+    }
+
+.ingresarFormulario:hover{
+    color: rgb(255,255,255);
+    background-color: rgb(250, 116, 54);
+    border: 2px solid rgb(255,255,255);
+}
+.error{
+    color: rgb(250, 116, 54);
+    font-size: 12px;
+    font-weight: bold;
+}
+.mensajeError{
+        grid-column: 2/3;
+}
+  /******termina ventana modal *******/
